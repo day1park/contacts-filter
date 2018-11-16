@@ -1,33 +1,41 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
-import './App.css'
+import "./App.css";
 
-import Header from './header'
-import Table from './table'
+import Header from "./header";
+import Table from "./table";
 
-import getContacts from './data/get-contacts'
+import getContacts from "./data/get-contacts";
 
 class App extends Component {
-
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       contacts: [],
-      nameFilter: '',
-      stateFilter: '',
-    }
+      nameFilter: "",
+      stateFilter: ""
+    };
+  }
+
+  componentDidMount() {
+    const data = getContacts();
+    data.then(response => {
+      this.setState({
+        contacts: response
+      });
+      console.log(this.state);
+    });
   }
 
   render() {
     return (
       <div>
         {/*<Header />*/}
-        <div className="Toolbar" >
-        </div>
+        <div className="Toolbar" />
         {/*<Table />*/}
       </div>
-    )
+    );
   }
 }
 
-export default App
+export default App;
