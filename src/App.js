@@ -32,7 +32,7 @@ class App extends Component {
       <div>
         {/*<Header />*/}
         <div className="Toolbar" />
-        {/*<Table />*/}
+        <Table contacts={this.state.contacts} />
       </div>
     );
   }
