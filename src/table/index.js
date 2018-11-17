@@ -8,8 +8,14 @@ const Table = ({ contacts }) => {
   });
   return (
     <table className="Table">
-      <thead />
-
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Company</th>
+          <th>State</th>
+        </tr>
+      </thead>
       <tbody>{allContacts}</tbody>
     </table>
   );

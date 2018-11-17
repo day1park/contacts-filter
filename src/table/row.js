@@ -15,7 +15,7 @@ const Row = ({ contact }) => {
   }
 
   return (
-    <tr>
+    <tr className="Row">
       <td>{fullName}</td>
       <td>{email}</td>
       <td>{company}</td>
