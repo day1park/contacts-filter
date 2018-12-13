@@ -4,6 +4,7 @@ import "./App.css";
 
 import Header from "./header";
 import Table from "./table";
+import Toolbar from "./toolbar";
 
 import getContacts from "./data/get-contacts";
 
@@ -23,7 +24,6 @@ class App extends Component {
       this.setState({
         contacts: response
       });
-      console.log(this.state);
     });
   }
 
@@ -31,6 +31,7 @@ class App extends Component {
     return (
       <div>
         <Header />
+        <Toolbar />
         <div className="Toolbar" />
         <Table contacts={this.state.contacts} />
       </div>
