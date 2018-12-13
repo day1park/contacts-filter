@@ -30,7 +30,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        {/*<Header />*/}
+        <Header />
         <div className="Toolbar" />
         <Table contacts={this.state.contacts} />
       </div>
