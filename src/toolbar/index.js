@@ -2,11 +2,11 @@ import React from "react";
 import Search from "./search";
 import Select from "./select";
 
-const Toolbar = ({ filterName }) => {
+const Toolbar = ({ filterName, filterState }) => {
   return (
     <div className="Toolbar">
       <Search filterName={filterName} />
-      <Select />
+      <Select filterState={filterState} />
     </div>
   );
 };

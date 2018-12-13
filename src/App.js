@@ -17,6 +17,7 @@ class App extends Component {
       stateFilter: ""
     };
     this.updateNameFilter = this.updateNameFilter.bind(this);
+    this.updateStateFilter = this.updateStateFilter.bind(this);
   }
 
   componentDidMount() {
@@ -34,14 +35,25 @@ class App extends Component {
     });
   }
 
+  updateStateFilter(option) {
+    this.setState({
+      stateFilter: option
+    });
+    console.log("state selected! " + this.state.stateFilter);
+  }
+
   render() {
     return (
       <div>
         <Header />
-        <Toolbar filterName={this.updateNameFilter} />
+        <Toolbar
+          filterName={this.updateNameFilter}
+          filterState={this.updateStateFilter}
+        />
         <Table
           contacts={this.state.contacts}
           nameFilter={this.state.nameFilter}
+          stateFilter={this.state.stateFilter}
         />
       </div>
     );

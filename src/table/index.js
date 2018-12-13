@@ -2,7 +2,7 @@
 import React from "react";
 import Row from "./row";
 
-const Table = ({ contacts, nameFilter }) => {
+const Table = ({ contacts, nameFilter, stateFilter }) => {
   // map through all contacts
   const allContacts = contacts
 

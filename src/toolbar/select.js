@@ -1,10 +1,15 @@
 import React from "react";
 
-const Select = () => {
+const Select = ({ filterState }) => {
   return (
     <div className="Select">
       <label>Select by State</label>
-      <select className="Select" type="text">
+      <select
+        className="Select"
+        onChange={e => {
+          filterState(e.target.value);
+        }}
+      >
         <option>NSW</option>
         <option>Victoria</option>
         <option>QLD</option>
