@@ -1,16 +1,12 @@
 import React from "react";
+import Search from "./search";
+import Select from "./select";
 
 const Toolbar = () => {
   return (
     <div className="Toolbar">
-      <input type="text" />
-      {/* <SearchBar /> */}
-      <select>
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-      </select>
-      {/* <Select /> */}
+      <Search />
+      <Select />
     </div>
   );
 };
