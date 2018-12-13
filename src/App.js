@@ -4,6 +4,7 @@ import "./App.css";
 
 import Header from "./header";
 import Table from "./table";
+import Toolbar from "./toolbar";
 
 import getContacts from "./data/get-contacts";
 
@@ -15,6 +16,7 @@ class App extends Component {
       nameFilter: "",
       stateFilter: ""
     };
+    this.updateNameFilter = this.updateNameFilter.bind(this);
   }
 
   componentDidMount() {
@@ -23,7 +25,12 @@ class App extends Component {
       this.setState({
         contacts: response
       });
-      console.log(this.state);
+    });
+  }
+
+  updateNameFilter(value) {
+    this.setState({
+      nameFilter: value
     });
   }
 
@@ -31,8 +38,11 @@ class App extends Component {
     return (
       <div>
         <Header />
-        <div className="Toolbar" />
-        <Table contacts={this.state.contacts} />
+        <Toolbar filterName={this.updateNameFilter} />
+        <Table
+          contacts={this.state.contacts}
+          nameFilter={this.state.nameFilter}
+        />
       </div>
     );
   }
