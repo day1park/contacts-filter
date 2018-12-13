@@ -1,6 +1,5 @@
-
-
 ### This exercise is designed to...
+
 - Test your knowledge of `React` and `javascript`
 - Test some basic `css` and `html` concepts
 - See how you write and organise your code
@@ -13,9 +12,9 @@
 
 1. Clone this repository and create a new version in your own github account
 2. In the repo directory run
-    ```bash
-    npm start
-    ```
+   ```bash
+   npm start
+   ```
 3. Navigate to http://localhost:3000/ in your browser
 4. Edit the file according to the instructions below
 5. Commit your changes
@@ -38,10 +37,12 @@ Your task is to create a simple table of contacts, with two filters.
 ### Filters
 
 ##### Name Filter
+
 - name filter takes a string and matches against the full name (first and last name) of the contact
 - leaving all contacts that have the string somewhere in either their first or last names, in the table
 
 #### State Filter
+
 - state filter should have a selectable list of all states in the contacts list
 - when a state is selected should leave only those contacts from that state in the table
 - the first and initial option in the selectable list should be `all` which does not filter the table
@@ -68,4 +69,13 @@ Your task is to create a simple table of contacts, with two filters.
 <br/>
 
 ##### This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-event hub react exercise
+
+#### App UI
+
+<img src="images/contacts-filter.png">
+
+- able to search by first or last name
+
+- able to select by state
+
+- able to select state AND search by name
