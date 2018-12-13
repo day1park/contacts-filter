@@ -15,18 +15,14 @@ const Table = ({ contacts, nameFilter, stateFilter }) => {
 
   const allContacts = contacts
     .filter(contact => {
-      if (stateFilter) {
-        if (stateFilter === "All" || "") {
-          allContacts = contacts.map(contact => {
-            return <Row key={contact.id} contact={contact} />;
-          });
-        } else {
-          const { address } = contact.profile;
-          if (address) {
-            const { state } = address;
-            if (state === stateFilter) {
-              return state;
-            }
+      if (stateFilter == "") {
+        return contacts;
+      } else {
+        const { address } = contact.profile;
+        if (address) {
+          const { state } = address;
+          if (state === stateFilter) {
+            return state;
           }
         }
       }

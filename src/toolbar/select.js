@@ -10,7 +10,7 @@ const Select = ({ filterState }) => {
           filterState(e.target.value);
         }}
       >
-        <option value="All">All</option>
+        <option value="">All</option>
         <option value="NSW">NSW</option>
         <option value="Victoria">Victoria</option>
         <option value="QLD">QLD</option>
