@@ -1,3 +1,4 @@
+/* ~ HEADER ~  */
 .Header {
   background-color: #282c34;
   min-height: 15vh;
@@ -7,26 +8,68 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding-top: 3rem;
 }
 
+/* ~ TOOLBAR ~  */
 .Toolbar {
   background-color: #282c34;
   min-height: 10vh;
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  width: 100%;
+  padding-bottom: 2rem;
 }
 
+table.toolbar-table {
+  width: 70%;
+}
+
+.Search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Search-input {
+  width: 50%;
+  padding: 5px 4px;
+  border-radius: 0px;
+}
+.Select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Select-option {
+  width: 50%;
+  height: 30px;
+}
+
+/* ~ TABLE ~  */
 .Table {
   background-color: #282c34;
   min-height: 75vh;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
+  display: table;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  width: 100%;
+}
+
+.Table th {
+  border-bottom: 1px solid #fff;
+}
+
+.Table td,
+.Table th {
+  text-align: center;
+  border-right: 1px solid #fff;
+  padding: 1px;
 }
