@@ -39,7 +39,6 @@ class App extends Component {
     this.setState({
       stateFilter: option
     });
-    console.log("state selected! " + this.state.stateFilter);
   }
 
   render() {
