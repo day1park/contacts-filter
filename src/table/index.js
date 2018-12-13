@@ -5,7 +5,7 @@ import Row from "./row";
 const Table = ({ contacts, nameFilter, stateFilter }) => {
   const allContacts = contacts
     .filter(contact => {
-      if (stateFilter == "") {
+      if (stateFilter === "") {
         return contacts;
       } else {
         const { address } = contact.profile;
