@@ -4,8 +4,9 @@ import Row from "./row";
 
 const Table = ({ contacts, nameFilter, stateFilter }) => {
   const allContacts = contacts
+    // filter by state
     .filter(contact => {
-      if (stateFilter == "") {
+      if (stateFilter === "") {
         return contacts;
       } else {
         const { address } = contact.profile;
@@ -17,6 +18,7 @@ const Table = ({ contacts, nameFilter, stateFilter }) => {
         }
       }
     })
+    //filter by first or last name
     .filter(contact => {
       const { firstName, lastName } = contact;
       const fullName = `${firstName.toLowerCase()} ${lastName.toLowerCase()}`;
@@ -24,6 +26,7 @@ const Table = ({ contacts, nameFilter, stateFilter }) => {
         return fullName.indexOf(nameFilter.toLowerCase()) !== -1;
       }
     })
+    //map out contacts
     .map(contact => {
       return <Row key={contact.id} contact={contact} />;
     });

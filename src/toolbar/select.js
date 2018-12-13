@@ -3,9 +3,8 @@ import React from "react";
 const Select = ({ filterState }) => {
   return (
     <div className="Select">
-      <label>Select by State</label>
       <select
-        className="Select"
+        className="Select-option"
         onChange={e => {
           filterState(e.target.value);
         }}
