@@ -1,16 +1,23 @@
 import React from "react";
 
-const Select = () => {
+const Select = ({ filterState }) => {
   return (
     <div className="Select">
       <label>Select by State</label>
-      <select className="Select" type="text">
-        <option>NSW</option>
-        <option>Victoria</option>
-        <option>QLD</option>
-        <option>South Australia</option>
-        <option>Washington State</option>
-        <option>New York</option>
+      <select
+        className="Select"
+        onChange={e => {
+          filterState(e.target.value);
+        }}
+      >
+        <option value="">All</option>
+        <option value="NSW">NSW</option>
+        <option value="Victoria">Victoria</option>
+        <option value="QLD">QLD</option>
+        <option value="South Australia">South Australia</option>
+        <option value="Washington State">Washington State</option>
+        <option value="New York">New York</option>
+        <option value="California">California</option>
       </select>
     </div>
   );

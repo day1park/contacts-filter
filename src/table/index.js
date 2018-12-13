@@ -2,10 +2,21 @@
 import React from "react";
 import Row from "./row";
 
-const Table = ({ contacts, nameFilter }) => {
-  // map through all contacts
+const Table = ({ contacts, nameFilter, stateFilter }) => {
   const allContacts = contacts
-
+    .filter(contact => {
+      if (stateFilter == "") {
+        return contacts;
+      } else {
+        const { address } = contact.profile;
+        if (address) {
+          const { state } = address;
+          if (state === stateFilter) {
+            return state;
+          }
+        }
+      }
+    })
     .filter(contact => {
       const { firstName, lastName } = contact;
       const fullName = `${firstName.toLowerCase()} ${lastName.toLowerCase()}`;
