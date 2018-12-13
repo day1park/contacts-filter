@@ -1,10 +1,16 @@
 import React from "react";
 
-const Search = () => {
+const Search = ({ filterName }) => {
   return (
     <div className="Search">
       <label>Search by Name</label>
-      <input className="Search" type="text" />
+      <input
+        className="Search"
+        type="text"
+        onChange={e => {
+          filterName(e.target.value);
+        }}
+      />
     </div>
   );
 };

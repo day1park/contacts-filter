@@ -16,6 +16,7 @@ class App extends Component {
       nameFilter: "",
       stateFilter: ""
     };
+    this.updateNameFilter = this.updateNameFilter.bind(this);
   }
 
   componentDidMount() {
@@ -27,13 +28,21 @@ class App extends Component {
     });
   }
 
+  updateNameFilter(value) {
+    this.setState({
+      nameFilter: value
+    });
+  }
+
   render() {
     return (
       <div>
         <Header />
-        <Toolbar />
-        <div className="Toolbar" />
-        <Table contacts={this.state.contacts} />
+        <Toolbar filterName={this.updateNameFilter} />
+        <Table
+          contacts={this.state.contacts}
+          nameFilter={this.state.nameFilter}
+        />
       </div>
     );
   }
